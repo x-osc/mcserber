@@ -1,0 +1,9 @@
+ - copy serberpack and whitelist to ./data
+ - edit Discord-Integration.toml to add bot token, channel id and admin id
+ - start server
+ - set keepinv, no fire, sleep percentage
+ - op self
+ - disable stellarity join message, totem void
+ - /function xaero:fairxaero 
+ - /function xaero:xaerowmnetherisfair 
+ - start chunky
