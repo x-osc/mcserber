@@ -30,4 +30,4 @@ services:
       RESOURCE_PACK_PROMPT: "pls download thx"
       HIDE_ONLINE_PLAYERS: "true"
     volumes:
-      - "./data:/data"
+      - "/data/mc:/data"
