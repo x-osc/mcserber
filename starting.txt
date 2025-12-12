@@ -1,4 +1,4 @@
- - copy serberpack and whitelist to ./data
+ - copy serberpack and whitelist to ./data (or run copystuff.sh)
  - edit Discord-Integration.toml to add bot token, channel id and admin id
  - start server
  - set keepinv, no fire, sleep percentage
