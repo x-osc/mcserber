@@ -39,6 +39,7 @@
       "RESOURCE_PACK_REQUIRED" = "true";
       "RESOURCE_PACK_SHA1" = "043db42f771efa012d69b83a4d776ae08eb1c83c";
       "SEED" = "4958145370078478047";
+      "SPAWN_PROTECTION" = "0";
       "SIMULATION_DISTANCE" = "6";
       "TYPE" = "MODRINTH";
       "USE_MEOWICE_FLAGS" = "true";
@@ -60,7 +61,10 @@
   };
   systemd.services."podman-mcserber-mc" = {
     serviceConfig = {
-      Restart = lib.mkOverride 90 "no";
+      Restart = lib.mkOverride 90 "always";
+      RestartSec = "5s";
+      StartLimitIntervalSec = 120;
+      StartLimitBurst = 5;
     };
     after = [
       "podman-network-mcserber_default.service"
@@ -74,6 +78,7 @@
     wantedBy = [
       "podman-compose-mcserber-root.target"
     ];
+    restartIfChanged = false;
   };
 
   # Networks
